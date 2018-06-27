@@ -1,0 +1,61 @@
+<div class="row" *ngIf="product$ | async as product">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Items</h5>
+        <table class="table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Product</th>
+              <th class="text-center" style="width: 230px">Quantity</th>
+              <th class="text-right" style="width: 200px">Total Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of product.items">
+              <td>
+                  <div [style.backgroundImage]="'url(' + item.product.imageUrl + ')'" class="thumbnail"></div>
+              </td>
+              <td>
+                {{ item.product.title }}
+              </td>
+              <td class="text-center">
+                x {{ item.quantity }}
+              </td>
+              <td class="text-right font-weight-bold">
+                {{ item.totalPrice | currency:'USD':'symbol' }}
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th class="text-right">{{ product.totalCost | currency:'USD':'symbol' }}</th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title text-right">Shipping Address</h5>
+        <div>
+          <hr>
+          <p>Name: <span class="float-right font-weight-bold">{{ product.shipping.name }}</span></p>
+          <hr>
+          <p>Address 1: <span class="float-right font-weight-bold">{{ product.shipping.addressLine1 }}</span></p>
+          <hr>
+          <p>Address 2: <span class="float-right font-weight-bold">{{ product.shipping.addressLine2 }}</span></p>
+          <hr>
+          <p>City: <span class="float-right font-weight-bold">{{ product.shipping.city }}</span></p>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
