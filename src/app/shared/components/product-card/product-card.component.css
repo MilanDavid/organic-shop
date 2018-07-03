@@ -1,5 +1,6 @@
 .card {
     margin-bottom: 30px;
+    border-radius: 5px;
 }
 .card-footer {
     padding: 0;
@@ -8,4 +9,5 @@
     width: 100%;
     height: 300px;
     background-size: cover;
+    border-radius: 5px;
 }
