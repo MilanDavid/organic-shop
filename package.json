@@ -28,6 +28,7 @@
     "core-js": "^2.4.1",
     "firebase": "^4.12.1",
     "firebase-tools": "^3.19.0",
+    "font-awesome": "^4.7.0",
     "g": "^2.0.1",
     "ng2-validation": "^4.2.0",
     "rxjs": "^6.2.1",
