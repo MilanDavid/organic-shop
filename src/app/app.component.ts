@@ -16,7 +16,6 @@ export class AppComponent implements OnDestroy {
     private router: Router,
     private userService: UserService
   ) {
-
     this.subscription = authService.user$.subscribe(user => {
       if(!user) return;
 

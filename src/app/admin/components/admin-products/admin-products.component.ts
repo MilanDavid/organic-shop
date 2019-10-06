@@ -10,7 +10,7 @@ import { DataTableResource } from 'angular5-data-table';
   styleUrls: ['./admin-products.component.css']
 })
 export class AdminProductsComponent implements OnDestroy {
-  products: Product[];
+  products;
   subscription: Subscription;
   tableResource: DataTableResource<Product>;
   items: Product[] = [];
@@ -27,7 +27,7 @@ export class AdminProductsComponent implements OnDestroy {
       });
   }
 
-  private initializeTable(products: Product[]){
+  private initializeTable(products){
     this.tableResource = new DataTableResource(products);
     this.tableResource.query({offset: 0})
       .then(items => this.items = items);

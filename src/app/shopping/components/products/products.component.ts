@@ -13,7 +13,7 @@ import { ShoppingCart } from 'shared/models/shopping-cart';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-  products: Product[] = [];
+  products= [];
   filteredProducts: Product[] = [];
   category: string;
   cart$: Observable<ShoppingCart>;

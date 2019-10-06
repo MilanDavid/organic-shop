@@ -23,8 +23,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CustomFormsModule,
     DataTableModule,
     AngularFireDatabaseModule,
-    AngularFireAuthModule,
-    NgbModule.forRoot()
+    AngularFireAuthModule
   ],
   declarations: [
     ProductCardComponent,
@@ -39,7 +38,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     DataTableModule,
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    NgbModule.forRoot().ngModule
+    NgbModule
   ],
   providers: [
     AuthService,
